@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
-        seekBar.getProgress();
+
     }
 
     @Override
