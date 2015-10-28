@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
         if (contador % 2 == 0) {
 
-            //Toast.makeText(getBaseContext(), "Encendido", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Encendido", Toast.LENGTH_LONG).show();
             bEncender.setText("Off");
             bEncender.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
 
 
         } else {
-            //Toast.makeText(getBaseContext(), "Apagado", Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Apagado", Toast.LENGTH_LONG).show();
             bEncender.setText("On");
             bEncender.getBackground().setColorFilter(0xFF00FF00, PorterDuff.Mode.MULTIPLY);
         }
@@ -73,16 +73,16 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-        ((TextView) findViewById(R.id.intensidad)).setText("Intensidad : "+i);
+        Toast.makeText(MainActivity.this," "+ i, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
-        ((TextView) findViewById(R.id.intensidad)).setText("Empezo : "+seekBar.getProgress());
+        seekBar.getProgress();
     }
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-        ((TextView) findViewById(R.id.intensidad)).setText("Intensidad : "+seekBar.getProgress());
+        seekBar.getProgress();
     }
 }
