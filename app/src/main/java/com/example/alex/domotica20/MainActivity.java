@@ -78,10 +78,12 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
         Intent intent = new Intent(this, DisplayMessageActivity1.class);
         startActivityForResult(intent, 1);
     }
+
     public void VentanaMovimiento(View v) {
         Intent intent = new Intent(this, Animaciones.class);
         startActivityForResult(intent, 1);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1) {
