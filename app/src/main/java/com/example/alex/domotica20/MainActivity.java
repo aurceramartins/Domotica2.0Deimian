@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     private Camera camera;
     private Window window;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
